@@ -1,0 +1,345 @@
+@import "variables";
+
+@keyframes slide {
+  0% {
+    margin-left: -110px;
+  }
+  40%,
+  100% {
+    margin-left: 5px;
+  }
+}
+body {
+  background: map-get($stomahulp-colors, "darkwhite");;
+  overflow: scroll;
+  margin-left: 130px;
+  margin-right: 130px;
+  margin-top: 18px;
+
+}
+
+.header {
+  @media (max-width: 654px) {
+    max-width: 306px;
+    min-width: 306px;
+  }
+  #navigationBar {
+    a {
+      color: map-get($stomahulp-colors, "darktext");;
+      font-size: 18px;
+      font-family: sans-serif;
+      line-height: 24px;
+      word-wrap: break-word;
+    }
+    .active {
+      color: map-get($stomahulp-colors, "green") !important;
+      font-weight: bold;
+      border-top: 2px solid map-get($stomahulp-colors, "green");
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 6px;
+      margin-right: 4px;
+}
+    }
+  }
+
+
+.navbar-brand-logo {
+  &.stomahulp {
+    width: 200px;
+    height: 40px;
+    background: map-get($stomahulp-colors, "darkwhite");;
+    z-index: 1;
+    position: relative;
+  }
+  &.animatie {
+    position: relative;
+    width: 105px;
+    margin-left: -110px;
+    animation-name: slide;
+    animation-duration: 6s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    @media (max-width: 654px) {
+      animation: none;
+    }
+  }
+  &.external {
+    width: 14px;
+    height: 14px;
+    margin-top: -4px;
+    margin-right: 4px;
+  }
+}
+nav {
+  background: map-get($stomahulp-colors, "darkwhite");;
+  &.navbar {
+    .dropdown {
+      &:hover {
+        .dropdown-menu {
+          display: block;
+          margin-top: 0;
+          border: map-get($stomahulp-colors, "darkwhite");;
+          background: map-get($stomahulp-colors, "darkwhite");;
+          top: 30px;
+          left: 8px;
+          box-shadow: 0px 4px 5px #d0d0d0;
+        }
+        .dropdown-toggle::after {
+          transform: translateY(15px) rotate(180deg);
+        }
+      }
+      .dropdown-toggle {
+        margin-top: -5px;
+        &:focus {
+          outline: none !important;
+          box-shadow: none !important;
+        }
+        &::after {
+          content: url("/assets/icons/arrow.svg");
+          vertical-align: auto;
+          margin-left: 5px;
+          width: 16px;
+          height: 16px;
+          background-color: transparent;
+          border: none;
+          box-shadow: none;
+          transform: translateY(4px);
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  border-top: 1px solid #b2dddf;
+  background: map-get($stomahulp-colors, "darkwhite");;
+  width: 100%;
+  height: 75vh;
+  @media (max-width: 1434px) {
+    margin-bottom: 50px;
+  }
+  @media (max-width: 610px) {
+    min-width: 350px;
+    max-width: 350px;
+  }
+  @media (max-height: 870px) {
+    min-height: 776px;
+    max-height: 776px;
+  }
+  
+  .titel {
+    h1 {
+      color: map-get($stomahulp-colors, "green");
+      font-size: 62px;
+      font-family: sans-serif;
+      font-weight: 700;
+      word-wrap: break-word;
+      padding-right: 22px;
+      @media (max-width: 938px) {
+        font-size: 50px;
+        padding-right: 16px
+      }
+
+      @media (max-width: 820px) {
+        font-size: 30px;
+        padding-right: 8px
+      }
+
+      @media (max-width: 650px) {
+        font-size: 20px;
+        padding-right: 6px
+      }
+     
+      
+    }
+    .woordCarrousel {
+      h1 {
+        text-decoration: underline;
+      }
+      h2 {
+        color: map-get($stomahulp-colors, "green");
+        font-size: 40px;
+        font-family: sans-serif;
+        font-weight: 600;
+        word-wrap: break-word;
+        opacity: 0.25;
+        @media (max-width: 938px) {
+          font-size: 30px;
+        }
+  
+        @media (max-width: 820px) {
+          font-size: 20px;
+        }
+  
+        @media (max-width: 650px) {
+          font-size: 10px;
+        }
+      }
+      h3 {
+        color: map-get($stomahulp-colors, "green");
+        font-size: 39.05px;
+        font-family: sans-serif;
+        font-weight: 600;
+        word-wrap: break-word;
+        opacity: 0.05;
+        @media (max-width: 938px) {
+          font-size: 29.05px;
+        }
+  
+        @media (max-width: 820px) {
+          font-size: 19.05px;
+        }
+  
+        @media (max-width: 650px) {
+          font-size: 9.05px;
+        }
+        
+      }
+    }
+  }
+  .ondertekst {
+    p {
+      width: 85%;
+      color: map-get($stomahulp-colors, "darktext");;
+      font-size: 20px;
+      font-family: sans-serif;
+      font-weight: 600;
+      line-height: 28px;
+      word-wrap: break-word;
+      @media (max-width: 938px) {
+        font-size: 14px;
+      }
+    }
+  }
+  .quoteSlider {
+    min-width: 415px;
+    min-height: 261px;
+    max-width: 415px;
+    max-height: 261px;
+    @media (max-width: 1434px) {
+      max-height: 340px;
+      min-height: 340px;
+
+    }
+    .quoteAfbeelding {
+      position: relative;
+      .afbeelding {
+        position: relative;
+        z-index: 2;
+        width: 185px;
+        height: 261px;
+        border-radius: 40% 0 40% 0;
+        border: 8px solid map-get($stomahulp-colors, "darkwhite");;
+        background-image: linear-gradient(
+            180deg,
+            rgba(37, 135, 139, 0) 31%,
+            rgba(37, 135, 139, 0.8) 100%
+          ),
+          url("/assets/thuiszorg.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto 100%;
+      }
+      .quote {
+        position: absolute;
+        top: 0;
+        width: 185px;
+        height: 340px;
+        background: map-get($stomahulp-colors, "pink");;
+        z-index: 1;
+        border-radius: 50% 0 40px 0;
+        border: 8px solid map-get($stomahulp-colors, "darkwhite");;
+        span {
+          color: map-get($stomahulp-colors, "white");;
+        }
+      }
+    }
+    .stomaAfbeelding {
+      position: relative;
+      top: 50px;
+      left: -10px;
+      @media (max-width: 1434px) {
+        top: 170px;
+      }
+      .afbeelding {
+        position: relative;
+        width: 166px;
+        height: 166px;
+        border-radius: 50%;
+        background: map-get($stomahulp-colors, "green");;
+        z-index: 1;
+        box-shadow: 0 0 0 8px map-get($stomahulp-colors, "darkwhite"), 0 0 0 9px map-get($stomahulp-colors, "green"), 0 0 0 17px map-get($stomahulp-colors, "darkwhite");
+        img {
+          width: 102px;
+          height: 102px;
+        }
+      }
+      .shape {
+        position: absolute;
+        bottom: 180px;
+        left: 5px;
+        width: 184px;
+        height: 242px;
+        border-radius: 0 50% 0 0;
+        background: map-get($stomahulp-colors, "lightgreen");;
+        z-index: 1;
+      }
+    }
+  }
+}
+.cookie-message {
+  margin: -30% 25%;
+  width: 620px;
+  height: 100px;
+  font-family: sans-serif;
+  position: relative;
+  z-index: 100;
+  border-radius: 20%;
+  .container {
+    box-shadow: 1px 2px 10px 2px map-get($stomahulp-colors, "green");
+    padding: 15px;
+    background: map-get($stomahulp-colors, "darkwhite");;
+    border-radius: 0px 30px;
+    .text {
+      a {
+        color: map-get($stomahulp-colors, "darktext");;
+      }
+    }
+    .accept-cookies {
+      background: map-get($stomahulp-colors, "green");;
+    }
+    .decline-cookies {
+      background: map-get($stomahulp-colors, "lightgreen");;
+    }
+  }
+}
+
+.footer {
+  background: map-get($stomahulp-colors, "darkwhite");;
+  position: relative;
+  bottom: -50px;
+ 
+  @media (max-width: 880px) {
+    bottom: -30px;
+  }
+
+  #navigationBar {
+    a {
+      color: map-get($stomahulp-colors, "darktext");;
+      font-size: 14px;
+      font-family: sans-serif;
+      font-weight: 400;
+      text-decoration: underline;
+      letter-spacing: 0.5px;
+      word-wrap: break-word;
+    }
+  }
+}
+
+// styling for cookie-notice 
+//.hero {
+//:not(.cookie-message) {
+//opacity: 0.7;
+//}
+//}

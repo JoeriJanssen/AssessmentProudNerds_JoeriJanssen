@@ -1,0 +1,42 @@
+$grid-breakpoints: (
+  xs: (0),
+  sm: (576px),
+  md: (768px),
+  lg: (992px),
+  xl: (1260px),
+  xxl: (1374px)
+);
+
+//colors
+
+$pink : #C14F96 !default;
+$lightpink : #C25097 !default;
+$darkgreen : #203140 !default;
+$green : #25878B !default;
+$lightgreen : #B2DDDF !default;
+$white  : #FFFFFF !default;
+$darkwhite : #ECEEEE !default;
+$black : #000000 !default;
+$ligtblack : #323232 !default;
+
+$stomahulp-colors: () !default;
+
+$stomahulp-colors : map-merge((
+    "pink" : $pink,
+    "ligtpink" : $lightpink,
+    "darktext" : $darkgreen,
+    "green" : $green,
+    "lightgreen" : $lightgreen,
+    "white" : $white,
+    "darkwhite" : $darkwhite,
+    "black" : $black,
+    "lightblack" : $ligtblack ), $stomahulp-colors);
+
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/bootstrap/scss/variables";
+
+
+
+
+
+

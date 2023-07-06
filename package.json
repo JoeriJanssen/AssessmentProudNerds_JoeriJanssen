@@ -1,0 +1,26 @@
+{
+  "name": "bootstrap",
+  "version": "1.0.0",
+  "description": "bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "compile-scss": "node-sass styles.scss -o dist/css",
+    "scss": "node-sass styles.scss dist/css/styles.css -w",
+    "start": "live-server"
+  },
+  "keywords": [
+    "bootstrap"
+  ],
+  "author": "Joeri",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.0",
+    "jquery": "^3.7.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "live-server": "^1.2.2",
+    "node-sass": "^9.0.0",
+    "sass": "^1.63.6"
+  }
+}
